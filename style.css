@@ -1,0 +1,490 @@
+Reset styles *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic settings */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+header {
+  background-color: #3c8dbc;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #3072a2;
+  border-radius: 5px;
+}
+
+/* Banner Section */
+.banner {
+  background: url("../assets/images/banner.jpg") no-repeat center center/cover;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner h2 {
+  position: relative;
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+/* Products Section */
+.products {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Product Item */
+.product-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.product-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.view-product-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #3c8dbc;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.view-product-btn:hover {
+  background-color: #3072a2;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+  background-color: #3c8dbc;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner h2 {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    padding: 0.3rem 0.5rem;
+  }
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Banner Section */
+.banner {
+  background-color: #007bff;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2rem;
+}
+
+/* Main Content Section */
+main {
+  padding: 2rem;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.product-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  height: 100%;
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+}
+
+.product-item h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.view-product-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.view-product-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Form Styles */
+form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input[type="submit"],
+form button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Profile and Dashboard */
+.profile-info,
+.dashboard-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.profile-info h2,
+.dashboard-info h2 {
+  margin-bottom: 1rem;
+}
+
+.profile-info p,
+.dashboard-info p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.profile-info .edit-btn,
+.dashboard-info .edit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-info .edit-btn:hover,
+.dashboard-info .edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Cart Page */
+.cart-container {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.cart-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.cart-container th,
+.cart-container td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.cart-container th {
+  background-color: #f0f0f0;
+}
+
+.cart-total {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.checkout-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #218838;
+}
+
+/* Checkout Page */
+.checkout-container {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.checkout-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.checkout-container th,
+.checkout-container td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.checkout-container th {
+  background-color: #f0f0f0;
+}
+
+.order-summary {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.place-order-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.place-order-btn:hover {
+  background-color: #218838;
+}
+
+/* Login/Register Page */
+.login-register-container {
+  max-width: 400px;
+  margin: 3rem auto;
+}
+
+.login-register-container form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-register-container input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-register-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-register-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  form {
+    max-width: 90%;
+  }
+
+  .cart-container table {
+    font-size: 0.9rem;
+  }
+
+  .checkout-container table {
+    font-size: 0.9rem;
+  }
+}
