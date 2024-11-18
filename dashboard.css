@@ -1,0 +1,197 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #ffdf00;
+}
+
+/* Main Content */
+.dashboard-container {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.dashboard-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Stats Card Styles */
+.stats-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.stats-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.stats-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Product Table Styles */
+.product-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-list th,
+.product-list td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.product-list th {
+  background-color: #004080;
+  color: white;
+}
+
+.product-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+.product-list td a {
+  color: #004080;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.product-list td a:hover {
+  text-decoration: underline;
+}
+
+.product-list td a.delete {
+  color: red;
+}
+
+.product-list td a.delete:hover {
+  color: darkred;
+}
+
+/* Button Styles for Delete and Edit Links */
+.product-list td a.delete:active,
+.product-list td a.edit:active {
+  color: #004080;
+}
+
+.product-list td a.edit {
+  color: #ffdf00;
+}
+
+.product-list td a.edit:hover {
+  color: #ffdf00;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  header nav a {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .dashboard-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .stats-card {
+    margin-bottom: 20px;
+  }
+
+  .product-list {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  select {
+    font-size: 0.9rem;
+  }
+}

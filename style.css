@@ -45,29 +45,77 @@ nav a:hover {
   border-radius: 5px;
 }
 
+.home_btn {
+  color: white;
+}
+
+.home_btn:hover {
+  color: rgb(208, 172, 28);
+}
+.product-item img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+  max-width: 150px; /* Maximum width of 150px */
+  max-height: 150px; /* Maximum height of 150px */
+  object-fit: contain; /* Ensures the entire image fits within the container without being cropped */
+  display: block; /* Makes the image a block element to avoid extra spacing at the bottom */
+  margin-left: auto; /* Center the image horizontally */
+  margin-right: auto; /* Center the image horizontally */
+}
+
+/* Banner Section */
 /* Banner Section */
 .banner {
-  background: url("../assets/images/banner.jpg") no-repeat center center/cover;
+  background-color: #007bff; /* Fallback background color if image fails to load */
   color: #fff;
   padding: 3rem 1rem;
   text-align: center;
   position: relative;
 }
 
-.banner::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+/* Container for both text and image */
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.banner h2 {
-  position: relative;
-  font-size: 2.5rem;
-  z-index: 1;
+.banner-content h2 {
+  font-size: 2rem;
+  margin: 0;
+  max-width: 50%; /* Make sure the text doesn't overflow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds contrast to text for readability */
+}
+
+.banner-content .banner-image {
+  max-width: 45%; /* Control the image size */
+}
+
+.banner-content .banner-image img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+/* Ensure content is responsive */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column; /* Stack the text and image vertically on smaller screens */
+    text-align: left;
+  }
+
+  .banner-content h2 {
+    font-size: 1.8rem; /* Adjust text size for smaller screens */
+    max-width: 100%; /* Allow the text to take full width on smaller screens */
+    margin-bottom: 1rem; /* Add space below the text */
+  }
+
+  .banner-content .banner-image {
+    max-width: 100%; /* Allow image to take full width on smaller screens */
+  }
 }
 
 /* Products Section */
@@ -457,6 +505,10 @@ form button:hover {
 
 .login-register-container button:hover {
   background-color: #0056b3;
+}
+.home_btn {
+  color: white;
+  text-decoration: none;
 }
 
 /* Footer */
